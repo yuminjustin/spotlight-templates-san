@@ -29,9 +29,7 @@ This template is base on webpack, support for san development <br>
 Webpack hot reload can't work well，just refresh when you edit your files。<br>
 <br>
 
-# :(
-
-<br><br><br>
+<br>
 注：开发状态只支持IE11，打包后的代码可以支持到IE7。<br>
 <br>
 notice:When you developing the codes just can run on IE7, then you execute build they can works on IE7.
