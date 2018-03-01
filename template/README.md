@@ -19,7 +19,7 @@ This template is base on webpack, support for san development <br>
 
 1.配置在build/config.js 当中；<br>
   Configures in build/config.js <br><br>
-2.关于san <a href="https://ecomfe.github.io/san/tutorial/start/" target="_blank"></a>；<br>
+2.关于san <a href="https://ecomfe.github.io/san/tutorial/start/" target="_blank">start</a>；<br>
   About san ↑<br><br>
 3.引入gulp对webpack打包后的js做关键字替换让它能支持更低版本IE，经过测试已支持IE7。<br>
 （gulp会在执行build之后自动执行，无需手动操作，为保证兼容性请尽量使用es5做开发）<br>
