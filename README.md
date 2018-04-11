@@ -28,6 +28,9 @@ This template is base on webpack, support for san development <br>
 4.webpack的热替换好像并不能生效，只会刷新页面。<br>
 Webpack hot reload can't work well，just refresh when you edit your files。<br>
 <br>
+5.gulp需要全局安装。<br>
+gulp  install globally.<br>
+<br>
 
 <br>
 注：开发状态只支持IE11，打包后的代码可以支持到IE7。<br>
