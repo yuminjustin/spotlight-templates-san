@@ -9,6 +9,9 @@
         <title>
             <%=l.title%>
         </title>
+        <% if (l.js) {%>
+            <!--[if IE]> <script type=text/javascript src="<%=l.js%>"> </script><![endif]-->
+        <% } %>
     </head>
 
     <body>

@@ -1,9 +1,10 @@
 var gulp = require('gulp');
 var replace = require('gulp-replace');
 var uglyfly = require('gulp-uglyfly');
+var cleanCSS = require('gulp-clean-css');
 var config = require('./build/config');
 
-var root = config.build.gulpPath;
+var root = config.build.outputPathName;
 
 gulp.task('replace', function () {
 
@@ -13,6 +14,10 @@ gulp.task('replace', function () {
             console.log(e);
         }))
         .pipe(gulp.dest(root + '/static/js/'));
+
+    gulp.src(root + '/static/css/*.css')
+        .pipe(cleanCSS({compatibility: 'ie6'}))
+        .pipe(gulp.dest(root + '/static/css/'));
 })
 
 
