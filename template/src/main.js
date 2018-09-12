@@ -1,4 +1,3 @@
-require("babel-polyfill");
 require('@/assets/css/reset.css');
 require('@/assets/css/page.css');
 var App = require('C/app');
