@@ -1,13 +1,13 @@
 {
-  "name": "s2",
+  "name": "{{name}}",
   "version": "1.0.0",
-  "description": "A san project",
+  "description": "{{description}}",
   "main": "index.js",
   "scripts": {
     "dev": "node  build/dev/index.js",
     "build": "node build/prod/index.js"
   },
-  "author": "lixiaolong <lixiaolong1063@stnts.com>",
+  "author": "{{author}}",
   "license": "MIT",
   "devDependencies": {
     "chalk": "^2.4.1",
