@@ -4,7 +4,7 @@ spotlight scaffold template for san<br>
 
 ## Use：
 
-     spotlight init san my-project
+     spotlight san my-project
 
      cd my-project
 
