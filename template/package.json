@@ -10,7 +10,7 @@
   "author": "{{author}}",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^9.5.1",
+    "autoprefixer": "^9.6.1",
     "chalk": "^2.4.2",
     "clean-webpack-plugin": "^2.0.2",
     "copy-webpack-plugin": "^5.0.3",
@@ -28,14 +28,14 @@
     "shelljs": "^0.8.3",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
-    "webpack": "^4.32.2",
+    "webpack": "^4.35.3",
     "webpack-bundle-analyzer": "^3.3.2",
-    "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.4.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2",
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "san": "^3.7.6"
+    "san": "^3.7.7"
   }
 }
