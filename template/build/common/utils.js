@@ -36,7 +36,8 @@ exports.HtmlWPMaker = function (config) {
             title: 'Spotlight template', // 默认标题
             template: 'index.html', // 源模板文件
             filename: 'index.html', // 输出文件
-            inject: true
+            inject: true,
+            ENV: process.env.NODE_ENV === 'development'
         }, config.htmlOption[i])
 
         if (config.env == '"development"') {
@@ -48,7 +49,7 @@ exports.HtmlWPMaker = function (config) {
                     collapseWhitespace: true,
                     removeAttributeQuotes: true
                 },
-                chunksSortMode: 'dependency',
+                chunksSortMode: 'auto',
                 excludeChunks: otherChuks(i, config.htmlOption) //屏蔽其它入口
             })
         }

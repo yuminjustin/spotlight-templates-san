@@ -16,7 +16,8 @@ module.exports = {
         htmlOption: { // 对应 entry
             app: {
                 title: 'san webpack',
-                js:'static/js/es5-shim.min.js'   // 低版本IE
+                js:'static/js/es5-shim.min.js',
+                js2:'static/js/es5-sham.min.js'   // 低版本IE
             }
         },
         bundleAnalyzerReport: false, // 打包报告
@@ -28,6 +29,7 @@ module.exports = {
         publicPath: "/",
         static: 'static',
         outputPath: path.resolve(__dirname, outputPath), // 临时
+        host: 'localhost',
         port: '5001',
         html5Router: false, // html5 router 
         htmlOption: { // 对应 entry

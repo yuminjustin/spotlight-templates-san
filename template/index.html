@@ -9,8 +9,12 @@
         <title>
             <%=l.title%>
         </title>
+        <script>window.ENV = <%=l.ENV%></script>
         <% if (l.js) {%>
-            <!--[if IE]> <script type=text/javascript src="<%=l.js%>"> </script><![endif]-->
+            <!--[if IE]> 
+                <script type=text/javascript src="<%=l.js%>"> </script>
+                <script type=text/javascript src="<%=l.js2%>"> </script>
+            <![endif]-->
         <% } %>
     </head>
 

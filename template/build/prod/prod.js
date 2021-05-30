@@ -1,10 +1,10 @@
 /* prod webpack 配置 */
 var path = require('path')
 var webpack = require('webpack')
-var merge = require('webpack-merge')
+var {merge} = require('webpack-merge')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
-var CleanWebpackPlugin = require('clean-webpack-plugin');
+var {CleanWebpackPlugin} = require('clean-webpack-plugin');
 var utils = require('../common/utils')
 var webpackBaseFunc = require("../common/base")
 var config = require('../config')
@@ -21,22 +21,26 @@ var _build = config.build,
         output: Object.assign(utils.filenames('js'),{
             path: path.resolve(__dirname, _build.outputPath)
         }),
-        devtool: '#source-map',
+        devtool: false,
         plugins: HWP_arr.concat([
             new webpack.DefinePlugin({
                 'process.env': _build.env
             }),
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin(utils.filenames('css')),
-            new CopyWebpackPlugin([{
-                from: _build.static,
-                to: _build.newStatic,
-                ignore: ['.*']
-            }])
+            new CopyWebpackPlugin({
+                patterns: [{
+                    from: _build.static,
+                    to: _build.newStatic,
+                    globOptions: {
+                        ignore: ['.*']
+                    }
+                }]
+
+            })
         ]),
         optimization: { /* 参考 webpack 官方示例配置 特殊要求自行配置*/
             /* https://github.com/webpack/webpack/tree/master/examples */
-            occurrenceOrder: true,
             runtimeChunk: {
                 name: "manifest"
             },

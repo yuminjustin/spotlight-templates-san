@@ -10,7 +10,7 @@ var spinner = ora('开始打包,请稍后...'),
     };
 
 spinner.start()
-shell.exec('webpack --config build/prod/wp_prod.js', silent, function (code, stdout, stderr) {
+shell.exec('cross-env NODE_ENV=production webpack --config build/prod/prod.js', silent, function (code, stdout, stderr) {
     spinner.stop()
     if (code == 0) {
         console.log(chalk.green(stdout))

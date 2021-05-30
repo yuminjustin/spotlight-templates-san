@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var replace = require('gulp-replace');
+var babel = require('gulp-babel');
 var uglyfly = require('gulp-uglyfly');
 var log = require('fancy-log');
 var cleanCSS = require('gulp-clean-css');
@@ -10,6 +11,9 @@ var root = config.build.outputPathName;
 gulp.task('default', function (done) {
 
     gulp.src(root + '/static/js/*.js')
+        .pipe(babel({
+            presets: ['babel-preset-env']
+        }))
         .pipe(replace('.catch(', "['catch'](")) // 解决IE不兼容
         .pipe(uglyfly())
         .on('error', function (err) { // 排错

@@ -31,8 +31,8 @@ Webpack hot reload can't work well，just refresh when you edit your files。<br
 5.gulp需要全局安装。<br>
 gulp install globally.<br>
 <br>
-6.Upgrade to webpack4<br><br>
-7.Upgrade gulp 4<br><br>
+6.Upgrade to webpack5<br><br>
+7.Upgrade gulp 5<br><br>
 
 <br>
 注：开发状态只支持IE11，打包后的代码可以支持到IE7。<br>

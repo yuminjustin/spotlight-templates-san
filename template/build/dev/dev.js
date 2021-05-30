@@ -1,6 +1,6 @@
 /* dev webpack 配置 */
 var webpack = require('webpack');
-var merge = require('webpack-merge');
+var {merge} = require('webpack-merge');
 var webpackBaseFunc = require('../common/base');
 var utils = require('../common/utils');
 var config = require('../config');
@@ -36,7 +36,7 @@ var _dev = config.dev,
             historyApiFallback: _dev.html5Router,
             hot: true,
             compress: true,
-            host: '0.0.0.0',
+            host: _dev.host,
             port: _dev.port,
             open: true,
             overlay: { //当有编译错误或者警告的时候显示一个全屏overlay
